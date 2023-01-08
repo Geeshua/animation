@@ -1,0 +1,58 @@
+.loading{
+    height: 60px;
+    width: 100%;
+    background-color: #6b6b6b;
+    margin-bottom: 30px;
+}
+
+@keyframes fill{
+    from {
+        width: 0%;
+        }
+    to {
+        width: 90%;
+        }
+}
+
+.loading-1{
+    position: relative;
+}
+
+.loading-1::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: rgb(72, 156, 68);
+    animation: fill 10s infinite ease-out;
+}
+
+
+@keyframes stop{
+    from {
+        left: 0%;
+        }
+    to {
+        width: 100%;
+        }
+}
+
+.loading-2{
+    position: relative;
+}
+
+.block{
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background: rgb(72, 156, 68);
+    animation: stop 5s infinite alternate;
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.block:hover{
+    animation-play-state: running;
+}

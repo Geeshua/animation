@@ -1,0 +1,48 @@
+.container{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background-color: #6b6b6b;
+}
+
+.ball{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(72, 156, 68);;
+    border-radius: 50%;
+    animation: bounce 5s infinite linear, move 5s infinite linear;
+}
+
+@keyframes move {
+    from{
+        left: 0;
+    }
+    to{
+        left: calc(100% - 20px);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 320px;
+        
+    }
+    55% {
+        top: 380px;
+    }
+    65% {
+        top: 350px;
+    }
+    95% {
+        top: 250px;
+    }
+    100% {
+        top: 255px;
+    }
+}
